@@ -1,11 +1,10 @@
 SET SESSION AUTOCOMMIT TO off;
 
-DELETE FROM xxx WHERE xxx > 123;
+DELETE FROM VT26082774B67B.members WHERE age > 45;
 
-SELECT ххх, ххх, ххх FROM DELETE_VECTORS
-	where ххх like 'users%';
+SELECT node_name, projection_name, deleted_row_count FROM DELETE_VECTORS
+   where projection_name like 'members%';
 
-SELECT func(ххх) FROM DELETE_VECTORS
-	where xxx like 'users%';
+SELECT MAX(deleted_row_count) FROM DELETE_VECTORS;
 
 ROLLBACK;
