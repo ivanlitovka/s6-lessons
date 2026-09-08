@@ -1,0 +1,5 @@
+SELECT COUNT(*) AS lost_admins
+FROM VT26082774B67B__STAGING.groups AS g 
+LEFT JOIN VT26082774B67B__STAGING.users AS u 
+ON g.admin_id = u.id 
+WHERE u.id IS NULL;
